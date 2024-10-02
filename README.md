@@ -2,7 +2,7 @@ Welcome to my assessment project! This project is built using Django, Bootstrap,
 
 To run the project, please follow these steps:
 
-1. Clone the repository
+1. Clone the repository from main branch
 2. Create a virtual environment with the command: py -m venv env
 3. Activate the virtual environment
 4. Install the required dependencies using: pip install -r requirements.txt
