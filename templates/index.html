@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    <title>Home</title>
+{% endblock title %}
+
+{% block main_content %}
+    <div class="card">
+        <div class="card-header bg-warning">
+            <h4>Welcome to my assignment</h4>
+        </div>
+        <div class="card-body">
+            <p>1. To get the assignment details <a href="{% static 'manual.pdf' %}" target="_blank"><span class="badge rounded-pill bg-info text-dark">Click Me</span></a></p>
+            <p>2. Demo user credential as:</p>
+            <ul>
+                <li>Email: test_user@gmail.com</li>
+                <li>Password: python12345</li>
+            </ul>
+        </div>
+    </div>
+{% endblock main_content %}

@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    <title>Employee Add</title>
+{% endblock title %}
+
+{% block main_content %}
+    <div class="card p-4">
+        <div class="card-header bg-warning">
+            <h4>Employee Add</h4>
+        </div>
+        <div class="card-body">
+            <form method="post" data-cities-url="" novalidate>
+                {% csrf_token %}
+                <div class="mb-3">
+                    {{forms.name|as_crispy_field }}
+                </div>
+                <div class="mb-3">
+                    {{forms.email|as_crispy_field }}
+                </div>
+                <div class="mb-3">
+                    {{forms.phone|as_crispy_field }}
+                </div>
+                <div class="mb-3">
+                    {{forms.department|as_crispy_field }}
+                </div>
+                <div class="mb-3">
+                    {{forms.achievements|as_crispy_field }}
+                </div>
+                <div class="mb-3">
+                    {{forms.address|as_crispy_field }}
+                </div>                
+                <button type="submit" class="btn btn-primary">Add Employee</button>
+            </form>
+        </div>
+    </div>
+{% endblock main_content %}
+
+{% block js_script %}
+<script>
+    $(document).ready(function() {
+        $("#id_department").select2({
+         
+        });
+    });
+    $(document).ready(function() {
+        $("#id_achievements").select2({
+         
+        });
+    });
+</script>    
+{% endblock js_script %}
